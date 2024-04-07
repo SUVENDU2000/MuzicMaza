@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="MuzicMaza" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nwt-CV-L0x">
+                                <rect key="frame" x="0.0" y="59" width="393" height="709"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <tabBar contentMode="scaleToFill" barStyle="black" itemPositioning="fill" translatesAutoresizingMaskIntoConstraints="NO" id="N1Y-S6-wKI">
+                                <rect key="frame" x="0.0" y="768" width="393" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4Nb-nK-n4k"/>
+                                </constraints>
+                                <items>
+                                    <tabBarItem title="For You" id="6vQ-8O-Dbx">
+                                        <imageReference key="image" image="shared.with.you" catalog="system" symbolScale="small"/>
+                                    </tabBarItem>
+                                    <tabBarItem title="Top Tracks" id="RBa-Po-SRz">
+                                        <imageReference key="image" image="rectangle.and.pencil.and.ellipsis.rtl" catalog="system" symbolScale="small"/>
+                                    </tabBarItem>
+                                </items>
+                                <color key="selectedImageTintColor" name="BackgroundOpositColour"/>
+                            </tabBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="N1Y-S6-wKI" secondAttribute="bottom" id="DI0-1j-nEY"/>
+                            <constraint firstItem="N1Y-S6-wKI" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Dhw-bn-mdj"/>
+                            <constraint firstItem="nwt-CV-L0x" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="OwO-EH-IZd"/>
+                            <constraint firstItem="N1Y-S6-wKI" firstAttribute="top" secondItem="nwt-CV-L0x" secondAttribute="bottom" id="QfK-Px-FdA"/>
+                            <constraint firstItem="nwt-CV-L0x" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="dag-Zk-xor"/>
+                            <constraint firstItem="nwt-CV-L0x" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="mV1-IX-mIm"/>
+                            <constraint firstItem="N1Y-S6-wKI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="qN6-WY-6PT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="songsTableView" destination="nwt-CV-L0x" id="Oti-hy-bvn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="1"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="rectangle.and.pencil.and.ellipsis.rtl" catalog="system" width="128" height="92"/>
+        <image name="shared.with.you" catalog="system" width="128" height="93"/>
+        <namedColor name="BackgroundOpositColour">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
